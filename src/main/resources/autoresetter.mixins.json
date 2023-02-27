@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.tildejustin.autoresetter.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "LevelLoadingScreenMixin",
+    "MinecraftClientMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "autoresetter",
+  "version": "${version}",
+  "name": "Autoresetter",
+  "description": "Customizable autoresetter for biomes and structures",
+  "authors": [
+    "tildejustin"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/autoresetter/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.tildejustin.autoresetter.Autoresetter"
+    ]
+  },
+  "mixins": [
+    "autoresetter.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "worldpreview": ">=2.3.3",
+    "minecraft": "1.16.1"
+  }
+}
