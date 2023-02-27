@@ -22,6 +22,11 @@ public abstract class LevelLoadingScreenMixin {
     private void render(CallbackInfo ci) {
         if (WorldPreview.world != null && WorldPreview.player != null && WorldPreview.clientWord != null && !Autoresetter.checkedReset) {
             boolean reset = true;
+            if (Atum.seed.length() > 0) {
+                System.out.println("set seed");
+                Autoresetter.checkedReset = true;
+                return;
+            }
             if (Autoresetter.biomes.length != 0) {
                 Biome spawnBiome = WorldPreview.player.getEntityWorld().getBiome(WorldPreview.spawnPos);
                 for (Biome biome : Autoresetter.biomes) {
@@ -38,13 +43,14 @@ public abstract class LevelLoadingScreenMixin {
                     if (structureLocation != null) {
                         System.out.println(structure + ": " + structureLocation.getX() + " " + structureLocation.getZ());
                         System.out.println("current pos:" + WorldPreview.spawnPos.getX() + " " + WorldPreview.spawnPos.getZ());
-                        if (Math.abs((WorldPreview.spawnPos.getX() << 4) - (structureLocation.getX() << 4)) <= structure.radius && Math.abs((WorldPreview.spawnPos.getZ() << 4) - (structureLocation.getZ() << 4)) <= structure.radius) {
+                        if (Math.abs((WorldPreview.spawnPos.getX() >> 4) - (structureLocation.getX() >> 4)) <= structure.radius && Math.abs((WorldPreview.spawnPos.getZ() >> 4) - (structureLocation.getZ() >> 4)) <= structure.radius) {
                             reset = false;
                             break;
                         }
                     }
                 }
             }
+
             System.out.println("Autoreset: " + reset);
             if (reset) {
                 Atum.hotkeyPressed = true;
