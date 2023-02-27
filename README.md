@@ -16,6 +16,7 @@ Structures are pairs of names and radii. The supported structures are:
 > pillager_outpost, mineshaft, mansion, jungle_pyramid, desert_pyramid, igloo, ruined_portal, shipwreck, swamp_hut, stronghold, monument, ocean_ruin, fortress, endcity, buried_treasure, village, nether_fossil, and bastion_remnant.
 
 I think radius should be <=12 to search in spawnchunks? Not sure but keep it small :P.
+Also it doesn't work with shipwrecks, which makes me worried that it doesn't work with other untested structures.
 
 Examples of valid configs are:
 
