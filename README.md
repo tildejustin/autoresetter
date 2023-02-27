@@ -4,11 +4,7 @@ The mod resets for any biome OR structure within a set radius, as configured by 
 ## How to use
 The autoresetter is configured with the `autoresetter.json` file in the config directory of your instance. It has two parts, biomes and structures.
 
-{% warning %}
-
 **Warning:** config is case-sensitive and everything should be lowercase
-
-{% endwarning %}
 
 Biomes is a list of all biomes the mod will reset for. The full list of these is:
 
