@@ -33,7 +33,7 @@ public abstract class LevelLoadingScreenMixin {
             }
             if (Autoresetter.structures.length > 0 && reset) {
                 for (Structure structure : Autoresetter.structures) {
-                    if (MinecraftClient.getInstance().getServer().getOverworld().locateStructure(structure.getStructure(), spawnPos, structure.radius, false) != null) {
+                    if (WorldPreview.world.getServer().getOverworld().locateStructure(structure.getStructure(), spawnPos, structure.radius, false) != null) {
                         reset = false;
                         break;
                     }
