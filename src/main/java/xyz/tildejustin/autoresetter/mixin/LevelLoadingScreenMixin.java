@@ -38,7 +38,7 @@ public abstract class LevelLoadingScreenMixin {
                     if (structureLocation != null) {
                         System.out.println(structure + ": " + structureLocation.getX() + " " + structureLocation.getZ());
                         System.out.println("current pos:" + WorldPreview.spawnPos.getX() + " " + WorldPreview.spawnPos.getZ());
-                        if (Math.abs((WorldPreview.spawnPos.getX() << 4) - (structureLocation.getX() << 4)) <= structure.radius || Math.abs((WorldPreview.spawnPos.getZ() << 4) - (structureLocation.getZ() << 4)) <= structure.radius) {
+                        if (Math.abs((WorldPreview.spawnPos.getX() << 4) - (structureLocation.getX() << 4)) <= structure.radius && Math.abs((WorldPreview.spawnPos.getZ() << 4) - (structureLocation.getZ() << 4)) <= structure.radius) {
                             reset = false;
                             break;
                         }
