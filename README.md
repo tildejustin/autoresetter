@@ -15,8 +15,10 @@ Structures are pairs of names and radii. The supported structures are:
 
 > pillager_outpost, mineshaft, mansion, jungle_pyramid, desert_pyramid, igloo, ruined_portal, shipwreck, swamp_hut, stronghold, monument, ocean_ruin, fortress, endcity, buried_treasure, village, nether_fossil, and bastion_remnant.
 
+**Notes: **
 I think radius should be <=12 to search in spawnchunks? Not sure but keep it small :P.
-Also it doesn't work with shipwrecks, which makes me worried that it doesn't work with other untested structures.
+
+It is really slow with shipwrecks and some other structures because `ServerWorld.locateStructure(StructureFeature<?> feature, BlockPos pos, int radius, boolean skipExistingChunks)` doesn't respect radius on them for some reason and it has to wait for the closest one to be found before continuing, which as anyone who has used `/locate` can attest, can take a little bit.
 
 Examples of valid configs are:
 
